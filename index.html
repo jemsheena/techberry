@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket QR Scanner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Bus Ticket Scanner</h1>
+
+    <video id="camera-feed" autoplay></video>
+    <button id="scan-btn">Scan QR Code</button>
+    <p id="result"></p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsqr/1.4.0/jsQR.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
