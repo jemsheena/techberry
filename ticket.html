@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket Generator</title>
+    <link rel="stylesheet" href="ticket.css">
+</head>
+<body>
+    <h1>Bus Ticket Booking</h1>
+
+    <div class="ticket-form">
+        <label for="from">From:</label>
+        <input type="text" id="from" placeholder="Enter source">
+
+        <label for="to">To:</label>
+        <input type="text" id="to" placeholder="Enter destination">
+
+        <label for="passengers">Passengers:</label>
+        <input type="number" id="passengers" min="1" placeholder="Number of passengers">
+
+        <button onclick="generateTicket()">Generate Ticket</button>
+    </div>
+
+    <div id="ticket" class="hidden">
+        <h2>Your Ticket</h2>
+        <p><strong>From:</strong> <span id="ticket-from"></span></p>
+        <p><strong>To:</strong> <span id="ticket-to"></span></p>
+        <p><strong>Passengers:</strong> <span id="ticket-passengers"></span></p>
+        <p><strong>Ticket ID:</strong> <span id="ticket-id"></span></p>
+        <div id="qrcode"></div>
+        <button onclick="downloadPDF()">Download Ticket (PDF)</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
