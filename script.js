@@ -32,6 +32,40 @@ function generateTicket() {
 
     alert("Ticket generated successfully!");
 }
+// Function to generate ticket and QR code
+function generateTicket() {
+    const from = document.getElementById("from").value;
+    const to = document.getElementById("to").value;
+    const passengers = document.getElementById("passengers").value;
+
+    if (!from || !to || !passengers) {
+        alert("Please fill all fields.");
+        return;
+    }
+
+    // Generate unique ticket ID
+    const ticketId = "TKT-" + Date.now();
+
+    // Display ticket details
+    document.getElementById("ticket-from").innerText = from;
+    document.getElementById("ticket-to").innerText = to;
+    document.getElementById("ticket-passengers").innerText = passengers;
+    document.getElementById("ticket-id").innerText = ticketId;
+
+    // Show the ticket section
+    document.getElementById("ticket").classList.remove("hidden");
+
+    // Generate QR code with ticket data
+    const qrData = JSON.stringify({ from, to, passengers, ticketId });
+    document.getElementById("qrcode").innerHTML = "";
+    new QRCode(document.getElementById("qrcode"), {
+        text: qrData,
+        width: 150,
+        height: 150
+    });
+
+    alert("Ticket generated successfully!");
+}
 
 // Function to download ticket as PDF
 function downloadPDF() {

@@ -1,50 +1,41 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
     padding: 20px;
-    text-align: center;
 }
 
 h1 {
-    color: #007bff;
+    text-align: center;
+    color: #333;
 }
 
 .ticket-form {
-    background: white;
+    background-color: #fff;
     padding: 20px;
+    border-radius: 5px;
     max-width: 400px;
     margin: 0 auto;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-input, button {
+input {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
+    margin: 10px 0;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 button {
-    background-color: #007bff;
-    color: white;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
     border: none;
     cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s;
+    width: 100%;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #45a049;
 }
 
 .hidden {
@@ -52,13 +43,10 @@ button:hover {
 }
 
 #ticket {
-    margin-top: 30px;
-    background: white;
+    margin-top: 20px;
+    background-color: #fff;
     padding: 20px;
     border-radius: 5px;
-    max-width: 400px;
-    margin: 0 auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #qrcode {
